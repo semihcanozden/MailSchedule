@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MailSend_Class\MailSend_Class.csproj" />
     <ProjectReference Include="..\RabbitMQ_Class\RabbitMQ_Class.csproj" />
   </ItemGroup>
 

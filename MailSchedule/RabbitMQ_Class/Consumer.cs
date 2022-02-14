@@ -55,8 +55,7 @@ namespace RabbitMQ_Class
 
                         if (isSend == false)
                         {
-                            MailSend ms = new MailSend();
-                            ms.Send(email, pass, to, subject, messagebody);
+                            
                             isSend = true;
                         }
                         channel.BasicAck(newTag, false);

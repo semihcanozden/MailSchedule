@@ -6,6 +6,7 @@ namespace MailSend_Class
 {
     public class MailSend : IMailSend
     {
+
         NetworkCredential login;
         SmtpClient client;
         MailMessage msg;

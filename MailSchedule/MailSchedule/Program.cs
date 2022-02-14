@@ -24,7 +24,5 @@ namespace MailSchedule
                services.AddSingleton<IMailSend,MailSend>();
                services.AddHostedService<Worker>();
            });
-
-
     }
 }

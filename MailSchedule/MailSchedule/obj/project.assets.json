@@ -596,6 +596,9 @@
       "MailSend_Class/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0"
+        },
         "compile": {
           "bin/placeholder/MailSend_Class.dll": {}
         },
@@ -608,6 +611,7 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "MailSend_Class": "1.0.0",
+          "Microsoft.Extensions.Configuration": "6.0.0",
           "Microsoft.Extensions.Hosting": "6.0.1",
           "RabbitMQ.Client": "6.2.3"
         },
@@ -1620,6 +1624,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "MailSend_Class >= 1.0.0",
       "Microsoft.Extensions.Hosting >= 6.0.1",
       "RabbitMQ_Class >= 1.0.0"
     ]
@@ -1651,6 +1656,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\GitHub\\Project\\MailSchedule\\MailSchedule\\MailSend_Class\\MailSend_Class.csproj": {
+              "projectPath": "C:\\GitHub\\Project\\MailSchedule\\MailSchedule\\MailSend_Class\\MailSend_Class.csproj"
+            },
             "C:\\GitHub\\Project\\MailSchedule\\MailSchedule\\RabbitMQ_Class\\RabbitMQ_Class.csproj": {
               "projectPath": "C:\\GitHub\\Project\\MailSchedule\\MailSchedule\\RabbitMQ_Class\\RabbitMQ_Class.csproj"
             }

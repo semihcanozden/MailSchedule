@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+8YnsQ9tbx+N0ZaOjX0XM5ah5Y0OsC0nCIyJO0MBCJXGS27yFndfpINq+6Kaz46ljaqXaib06QeXhhkcGQp2jQ==",
+  "dgSpecHash": "gOHWYTM8+DRQCmx913E6ojgob6y/6ZVBX/8KWogEJVkGl9dqbiWyt+tCeNrGvh+y/bglJmd3CUJQMUtNagvMEA==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Project\\MailSchedule\\MailSchedule\\MailSend_Class\\MailSend_Class.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\semih\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
+    "C:\\Users\\semih\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\semih\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\semih\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

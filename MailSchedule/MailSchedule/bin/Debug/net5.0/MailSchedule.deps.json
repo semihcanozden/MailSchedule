@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "MailSchedule/1.0.0": {
         "dependencies": {
+          "MailSend_Class": "1.0.0",
           "Microsoft.Extensions.Hosting": "6.0.1",
           "RabbitMQ_Class": "1.0.0"
         },
@@ -455,6 +456,9 @@
       },
       "System.Threading.Channels/4.7.1": {},
       "MailSend_Class/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "6.0.0"
+        },
         "runtime": {
           "MailSend_Class.dll": {}
         }
@@ -462,6 +466,7 @@
       "RabbitMQ_Class/1.0.0": {
         "dependencies": {
           "MailSend_Class": "1.0.0",
+          "Microsoft.Extensions.Configuration": "6.0.0",
           "Microsoft.Extensions.Hosting": "6.0.1",
           "RabbitMQ.Client": "6.2.3"
         },

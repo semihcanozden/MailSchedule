@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.32126.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailSchedule", "MailSchedule\MailSchedule.csproj", "{F7C20235-3A8C-4830-BFB0-7EC6D842AC08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ_Class", "RabbitMQ_Class\RabbitMQ_Class.csproj", "{5151556D-28F1-4558-9C36-99334A1885A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ_Class", "RabbitMQ_Class\RabbitMQ_Class.csproj", "{5151556D-28F1-4558-9C36-99334A1885A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSend_Class", "MailSend_Class\MailSend_Class.csproj", "{D4C74C48-943D-431F-B453-32E71E6971C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailSend_Class", "MailSend_Class\MailSend_Class.csproj", "{D04739D4-C979-4391-9A26-6A115F10C567}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{5151556D-28F1-4558-9C36-99334A1885A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5151556D-28F1-4558-9C36-99334A1885A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5151556D-28F1-4558-9C36-99334A1885A3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4C74C48-943D-431F-B453-32E71E6971C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4C74C48-943D-431F-B453-32E71E6971C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4C74C48-943D-431F-B453-32E71E6971C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4C74C48-943D-431F-B453-32E71E6971C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D04739D4-C979-4391-9A26-6A115F10C567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D04739D4-C979-4391-9A26-6A115F10C567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D04739D4-C979-4391-9A26-6A115F10C567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D04739D4-C979-4391-9A26-6A115F10C567}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

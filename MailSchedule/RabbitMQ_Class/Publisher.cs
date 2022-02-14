@@ -29,4 +29,3 @@ namespace RabbitMQ_Class
         }
     }
 }
-

@@ -1,12 +1,12 @@
-C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\bin\Debug\net5.0\MailSend_Class.deps.json
-C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\bin\Debug\net5.0\MailSend_Class.dll
-C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\bin\Debug\net5.0\ref\MailSend_Class.dll
-C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\bin\Debug\net5.0\MailSend_Class.pdb
 C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\obj\Debug\net5.0\MailSend_Class.csproj.AssemblyReference.cache
 C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\obj\Debug\net5.0\MailSend_Class.GeneratedMSBuildEditorConfig.editorconfig
 C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\obj\Debug\net5.0\MailSend_Class.AssemblyInfoInputs.cache
 C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\obj\Debug\net5.0\MailSend_Class.AssemblyInfo.cs
 C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\obj\Debug\net5.0\MailSend_Class.csproj.CoreCompileInputs.cache
+C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\bin\Debug\net5.0\MailSend_Class.deps.json
+C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\bin\Debug\net5.0\MailSend_Class.dll
+C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\bin\Debug\net5.0\ref\MailSend_Class.dll
+C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\bin\Debug\net5.0\MailSend_Class.pdb
 C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\obj\Debug\net5.0\MailSend_Class.dll
 C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\obj\Debug\net5.0\ref\MailSend_Class.dll
 C:\GitHub\Project\MailSchedule\MailSchedule\MailSend_Class\obj\Debug\net5.0\MailSend_Class.pdb
