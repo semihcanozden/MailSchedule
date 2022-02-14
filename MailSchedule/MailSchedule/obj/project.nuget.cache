@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uPowV7uqxFEU6B6lEUFp7u+cgoZcJ70OWz4ew0dR/Dql84usDBRvO1QQtTXJInqm0gR15ycz7/OV4O4S2OiK8g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\semih\\source\\repos\\MailSchedule\\MailSchedule\\MailSchedule.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\semih\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}
