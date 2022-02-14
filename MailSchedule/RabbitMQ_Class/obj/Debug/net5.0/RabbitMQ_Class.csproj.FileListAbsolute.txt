@@ -1,0 +1,15 @@
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\bin\Debug\net5.0\RabbitMQ_Class.deps.json
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\bin\Debug\net5.0\RabbitMQ_Class.dll
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\bin\Debug\net5.0\ref\RabbitMQ_Class.dll
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\bin\Debug\net5.0\RabbitMQ_Class.pdb
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\RabbitMQ_Class.csproj.AssemblyReference.cache
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\RabbitMQ_Class.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\RabbitMQ_Class.AssemblyInfoInputs.cache
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\RabbitMQ_Class.AssemblyInfo.cs
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\RabbitMQ_Class.csproj.CoreCompileInputs.cache
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\RabbitMQ_Class.dll
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\ref\RabbitMQ_Class.dll
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\RabbitMQ_Class.pdb
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\bin\Debug\net5.0\MailSend_Class.dll
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\bin\Debug\net5.0\MailSend_Class.pdb
+C:\GitHub\Project\MailSchedule\MailSchedule\RabbitMQ_Class\obj\Debug\net5.0\RabbitMQ_Class.csproj.CopyComplete
