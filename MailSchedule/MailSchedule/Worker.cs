@@ -10,12 +10,12 @@ namespace MailSchedule
     {
         IConsumer _consumer;
         IPublisher _publisher;
-        IMailSend _mailsend;
-        public Worker(IConsumer consumer, IPublisher publisher, IMailSend mailsend)
+        IMailSend _mailSend;
+        public Worker(IConsumer consumer, IPublisher publisher, IMailSend mailSend)
         {
             _publisher = publisher;
             _consumer = consumer;
-            _mailsend = mailsend;
+            _mailSend = mailSend;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -24,7 +24,7 @@ namespace MailSchedule
             {
                 //_publisher.getMessage("can.oz.den.semih@gmail.com", "1903semih2002", "semih34_can55@hotmail.com", "Test", "Testİçerik");
                 //_consumer.QueueSendMessage();
-                _mailsend.Send();
+                _mailSend.Send();
                 await Task.Delay(1000, stoppingToken);
             }
         }

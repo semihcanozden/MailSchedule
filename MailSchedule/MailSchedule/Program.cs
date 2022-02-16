@@ -21,7 +21,7 @@ namespace MailSchedule
            {
                services.AddSingleton<IConsumer, Consumer>();
                services.AddSingleton<IPublisher, Publisher>();
-               services.AddSingleton<IMailSend,MailSend>();
+               services.AddSingleton<IMailSend, MailSend>();
                services.AddHostedService<Worker>();
            });
     }
