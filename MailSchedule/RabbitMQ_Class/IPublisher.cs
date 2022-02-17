@@ -2,6 +2,6 @@
 {
     public interface IPublisher
     {
-        void getMessage(string MailAdress, string Password, string To, string Subject, string MessageBody);
+        void getMessage(MailQueueModel mailQueueModel);
     }
 }

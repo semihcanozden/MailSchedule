@@ -1,7 +1,11 @@
-﻿namespace RabbitMQ_Class
+﻿using System;
+
+namespace RabbitMQ_Class
 {
     public interface IConsumer
     {
-        void QueueSendMessage();
+        public event EventHandler<MailQueueModel> messageEvents;
+        void ReciveMessages();
+        void Delete(ulong deliveryTag);
     }
 }
