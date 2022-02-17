@@ -20,13 +20,27 @@ namespace MailSchedule
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            _consumer.ReciveMessages();
+            _consumer.messageEvents += _consumer_messageEvents;
             while (!stoppingToken.IsCancellationRequested)
             {
-                //_publisher.getMessage("can.oz.den.semih@gmail.com", "1903semih2002", "semih34_can55@hotmail.com", "Test", "Testİçerik");
+                //_publisher.getMessage(new MailQueueModel() { Email="can.oz.den.semih@gmail.com", Password="1903semih2002", To="semih34_can55@hotmail.com", Subject="test", Body="deneme"});
                 //_consumer.QueueSendMessage();
-                _mailSend.Send();
+                //_mailSend.Send(new MailModel() { To="semih34_can55@hotmail.com",Subject="test",Body="deneme"});
                 await Task.Delay(1000, stoppingToken);
             }
+        }
+
+        private void _consumer_messageEvents(object sender, MailQueueModel e)
+        {
+            ulong tag = (ulong)sender;
+            _mailSend.Send(new MailModel()
+            {
+                To = e.To,
+                Body = e.Body,
+                Subject = e.Subject
+            });
+            _consumer.Delete(tag);
         }
     }
 }

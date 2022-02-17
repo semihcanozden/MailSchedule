@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nmCu3hA/fIoIZO164XUjV9uCozsxBW1ye0LEt3EoIqY8EKbydggtIP/TpjakiejyrrIFpG2pMpPNmLRIc7E+Sg==",
+  "dgSpecHash": "8cuXtqEdvNevFHiFOqA2/ibw/xiDDNmgEM4CuIpKaDQd2USDJ3YE3ZyV9+UmmlWhu5s6jX2GBDjbd9ifyVNnYA==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Project\\MailSchedule\\MailSchedule\\RabbitMQ_Class\\RabbitMQ_Class.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\semih\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\semih\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\rabbitmq.client\\6.2.3\\rabbitmq.client.6.2.3.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",

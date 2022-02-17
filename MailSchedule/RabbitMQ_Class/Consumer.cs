@@ -1,26 +1,27 @@
-﻿using System.Text;
-using System.Net.Mail;
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
+using System;
 using RabbitMQ.Client.Events;
-using System.Net;
 using MailSend_Class;
 using Microsoft.Extensions.Configuration;
-using System;
-using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace RabbitMQ_Class
 {
     public class Consumer : IConsumer
     {
+        public event EventHandler<MailQueueModel> messageEvents;
+        IModel channel;
+
         private readonly IConfiguration configuration;
         public Consumer(IConfiguration config)
         {
             this.configuration = config;
         }
-        public void QueueSendMessage()
-        {
+
+
+        public void ReciveMessages()
+        {            
             var hostName = configuration.GetSection("RabbitMQ:hostName").Value;
             var queueName = configuration.GetSection("RabbitMQ:queueName").Value;
 
@@ -28,7 +29,7 @@ namespace RabbitMQ_Class
 
             IConnection connection = factory.CreateConnection();
 
-            IModel channel = connection.CreateModel();
+            channel = connection.CreateModel();
 
             channel.QueueDeclare(
                 queue: queueName,
@@ -40,44 +41,19 @@ namespace RabbitMQ_Class
             var consumer = new EventingBasicConsumer(channel);
             channel.BasicConsume(queue: queueName, autoAck: false, consumer: consumer);
 
-            NetworkCredential login;
-            SmtpClient client;
-            MailMessage msg;
 
-            ulong previousTag = 1;
-            ulong newTag;
-
-            var isGone = false;
-            var isSend = false;
-
-            while (isGone == false)
+            consumer.Received += (model, ea) =>
             {
-                consumer.Received += (model, ea) =>
-                {
+                var body = ea.Body.ToArray();
+                string message = Encoding.UTF8.GetString(body);
+                var messageBody = JsonConvert.DeserializeObject<MailQueueModel>(message);
+                messageEvents?.Invoke(ea.DeliveryTag,messageBody);
+            };
+        }
 
-                    if (previousTag == ea.DeliveryTag)
-                    {
-                        newTag = previousTag;
-                        var body = ea.Body.ToArray();
-                        string[] message = Encoding.UTF8.GetString(body).Split(" ");
-                        var email = message[0];
-                        var pass = message[1];
-                        var to = message[2];
-                        var subject = message[3];
-                        var messagebody = message[4];
-
-                        if (isSend == false)
-                        {
-                            //MailSend ms = new MailSend();
-                            //ms.Send(email, pass, to, subject, messagebody);
-                            isSend = true;
-                        }
-                        channel.BasicAck(newTag, false);
-                        previousTag = ea.DeliveryTag;
-                        isGone = true;
-                    }
-                };
-            }
+        public void Delete(ulong deliveryTag)
+        {
+            channel.BasicAck(deliveryTag, false);
         }
     }
 }
