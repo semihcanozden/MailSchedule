@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fCKHW+laahhnsB1FevsCkmhINDudtSodHS8fhRgrqkzc/Ef6OmQ2gBQzfgeXY/JOUpIAyg1z5+1yAs5h5+vnyA==",
+  "dgSpecHash": "zfhRnJIfImpF1UWBgoBDtmbSkQgd1939XDxUQmGgz1OS3HfJXSv1sDZzf2Bg55QIk8dRwJxodM6R4jxjsAJeZw==",
   "success": true,
   "projectFilePath": "C:\\GitHub\\Project\\MailSchedule\\MailSchedule\\MailSchedule\\MailSchedule.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\semih\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\semih\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\rabbitmq.client\\6.2.3\\rabbitmq.client.6.2.3.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\semih\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",

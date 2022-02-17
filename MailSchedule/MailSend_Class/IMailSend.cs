@@ -8,6 +8,6 @@ namespace MailSend_Class
 {
     public interface IMailSend
     {
-        void Send();
+        void Send(MailModel mailModel);
     }
 }
