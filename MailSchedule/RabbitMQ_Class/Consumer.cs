@@ -8,52 +8,125 @@ using System.Text;
 
 namespace RabbitMQ_Class
 {
-    public class Consumer : IConsumer
+  public class Consumer : IConsumer
+  {
+    public event EventHandler<MailQueueModel> MailQueueEvents;
+    //public event EventHandler<LogQueueModel> LogQueueEvents;
+
+
+
+    private IModel channelMail;
+    private IModel channelLog;
+
+
+
+    private readonly IConfiguration _configuration;
+    public Consumer(IConfiguration config)
     {
-        public event EventHandler<MailQueueModel> messageEvents;
-        IModel channel;
-
-        private readonly IConfiguration configuration;
-        public Consumer(IConfiguration config)
-        {
-            this.configuration = config;
-        }
-
-
-        public void ReciveMessages()
-        {            
-            var hostName = configuration.GetSection("RabbitMQ:hostName").Value;
-            var queueName = configuration.GetSection("RabbitMQ:queueName").Value;
-
-            var factory = new ConnectionFactory { HostName = hostName };
-
-            IConnection connection = factory.CreateConnection();
-
-            channel = connection.CreateModel();
-
-            channel.QueueDeclare(
-                queue: queueName,
-                durable: false,
-                exclusive: false,
-                autoDelete: false,
-                arguments: null);
-
-            var consumer = new EventingBasicConsumer(channel);
-            channel.BasicConsume(queue: queueName, autoAck: false, consumer: consumer);
-
-
-            consumer.Received += (model, ea) =>
-            {
-                var body = ea.Body.ToArray();
-                string message = Encoding.UTF8.GetString(body);
-                var messageBody = JsonConvert.DeserializeObject<MailQueueModel>(message);
-                messageEvents?.Invoke(ea.DeliveryTag,messageBody);
-            };
-        }
-
-        public void Delete(ulong deliveryTag)
-        {
-            channel.BasicAck(deliveryTag, false);
-        }
+      this._configuration = config;
     }
+
+    event EventHandler<MailQueueModel> IConsumer.MailQueueEvents
+    {
+      add
+      {
+        var hostName = _configuration.GetSection("RabbitMQ:hostName").Value;
+        var userName = _configuration.GetSection("RabbitMQ:userName").Value;
+        var password = _configuration.GetSection("RabbitMQ:password").Value;
+
+        var factory = new ConnectionFactory
+        {
+          UserName = userName,
+          Password = password,
+          VirtualHost = "/mail",
+          Port = AmqpTcpEndpoint.UseDefaultPort,
+          HostName = hostName
+        };
+
+        var connection = factory.CreateConnection();
+
+        channelMail = connection.CreateModel();
+
+        channelMail.QueueDeclare(
+            queue: "mail",
+            durable: false,
+            exclusive: false,
+            autoDelete: false,
+            arguments: null);
+
+        var consumer = new EventingBasicConsumer(channelMail);
+        channelMail.BasicConsume(queue: "mail", autoAck: false, consumer: consumer);
+
+
+        consumer.Received += (model, ea) =>
+        {
+          var body = ea.Body.ToArray();
+          string message = Encoding.UTF8.GetString(body);
+          var messageBody = JsonConvert.DeserializeObject<MailQueueModel>(message);
+          value?.Invoke(ea.DeliveryTag, messageBody);
+        };
+      }
+
+      remove
+      {
+        throw new NotImplementedException();
+      }
+    }
+
+    event EventHandler<LogQueueModel> IConsumer.LogQueueEvents
+    {
+      add
+      {
+        var hostName = _configuration.GetSection("RabbitMQ:hostName").Value;
+        var userName = _configuration.GetSection("RabbitMQ:userName").Value;
+        var password = _configuration.GetSection("RabbitMQ:password").Value;
+
+        var factory = new ConnectionFactory
+        {
+          UserName = userName,
+          Password = password,
+          VirtualHost = "/log",
+          Port = AmqpTcpEndpoint.UseDefaultPort,
+          HostName = hostName
+        };
+
+        var connection = factory.CreateConnection();
+
+        channelLog = connection.CreateModel();
+
+        channelLog.QueueDeclare(
+            queue: "log",
+            durable: false,
+            exclusive: false,
+            autoDelete: false,
+            arguments: null);
+
+        var consumer = new EventingBasicConsumer(channelLog);
+        channelLog.BasicConsume(queue: "log", autoAck: false, consumer: consumer);
+
+
+        consumer.Received += (model, ea) =>
+        {
+          var body = ea.Body.ToArray();
+          string message = Encoding.UTF8.GetString(body);
+          var messageBody = JsonConvert.DeserializeObject<LogQueueModel>(message);
+          value?.Invoke(ea.DeliveryTag, messageBody);
+        };
+      }
+
+      remove
+      {
+        throw new NotImplementedException();
+      }
+    }
+
+    public void DeleteMail(ulong deliveryTag)
+    {
+      channelMail.BasicAck(deliveryTag, false);
+    }
+    public void DeleteLog(ulong deliveryTag)
+    {
+      channelLog.BasicAck(deliveryTag, false);
+    }
+  }
 }

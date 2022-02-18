@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace MailSend_Class
 {
-    public class MailModel
+  public class MailModel
+  {
+    public List<string> To { get; set; }
+    public string Subject { get; set; }
+    public string Body { get; set; }
+    public List<string> Attachments { get; set; }
+    public List<string> Cc { get; set; }
+    public List<string> Bcc { get; set; }
+    public bool IsBodyHtml { get; set; }
+    public MailModel()
     {
-        public string To { get; set; }
-        public string Subject { get; set; }
-        public string Body { get; set; }
-        public List<string> Attachments { get; set; }
-        public bool IsBodyHtml { get; set; }
-        public MailModel()
-        {
-            Attachments = new List<string>();
-            IsBodyHtml = true;
-        }
-    }    
+      To = new List<string>();
+      Attachments = new List<string>();
+      Cc = new List<string>();
+      Bcc = new List<string>();
+      IsBodyHtml = true;
+    }
+  }
 }

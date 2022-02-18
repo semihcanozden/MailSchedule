@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace RabbitMQ_Class
 {
-    public class MailQueueModel
+  public class MailQueueModel
+  {
+    public List<string> To { get; set; }
+    public string Subject { get; set; }
+    public string Body { get; set; }
+    public List<string> Attachments { get; set; }
+    public List<string> Cc { get; set; }
+    public List<string> Bcc { get; set; }
+    public MailQueueModel()
     {
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string To { get; set; }
-        public string Subject { get; set; }
-        public string Body { get; set; }
+      To = new List<string>();
+      Attachments = new List<string>();
+      Cc = new List<string>();
+      Bcc = new List<string>();
     }
+  }
 }

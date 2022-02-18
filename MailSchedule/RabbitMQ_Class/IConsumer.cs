@@ -4,8 +4,9 @@ namespace RabbitMQ_Class
 {
     public interface IConsumer
     {
-        public event EventHandler<MailQueueModel> messageEvents;
-        void ReciveMessages();
-        void Delete(ulong deliveryTag);
+    event EventHandler<MailQueueModel> MailQueueEvents;
+    event EventHandler<LogQueueModel> LogQueueEvents;
+    void DeleteMail(ulong deliveryTag);
+    void DeleteLog(ulong deliveryTag);
     }
 }
