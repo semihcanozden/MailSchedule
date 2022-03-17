@@ -13,8 +13,8 @@ namespace MailSchedule
     IMailSend _mailSend;
     public Worker(IConsumer consumer, IPublisher publisher, IMailSend mailSend)
     {
-      _publisher = publisher;
-      _consumer = consumer;
+      _publisher = publisher; 
+      _consumer = consumer; 
       _mailSend = mailSend;
     }
 
